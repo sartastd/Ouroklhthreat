@@ -691,12 +691,12 @@ me.registerheal = function(spellname, spellid, amount, target)
 		me.event.threat = 0
 	elseif spellid == "deathcoil" then
 		me.event.threat = 0
-	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "regrowth" or spellid == "rejuvenation" then
+	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "Bloodcraze" or spellid == "regrowth" or spellid == "rejuvenation" then
 		me.event.threat = 0	
 	end
 	
 	if mes_sartas_Heal then
-			mod.out.printtrace(string.format("Heal :"..spellname.." amount : "..amount.." target :"..target.." Threat genered : "..me.event.threat ))
+			mod.out.printtrace(string.format("Heal 699 :"..spellname.." amount : "..amount.." target :"..target.." Threat genered : "..me.event.threat ))
 		end
 	
 	me.addattacktodata(mod.string.get("threatsource", "healing"), me.event)
