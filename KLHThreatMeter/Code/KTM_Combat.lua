@@ -472,7 +472,7 @@ me.normalattack = function(spellname, spellid, damage, isdot, target, iscrit, sp
 	-- NG modi execute
 	if spellid == "execute"  then
 		
-		me.event.threat = damage*1.25*threatmodifier
+		me.event.threat = damage*threatmodifier
 		me.event.damage = damage
 		me.event.name = mod.string.get("spell", "execute")
 	end	
