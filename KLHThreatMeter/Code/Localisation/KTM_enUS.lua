@@ -37,7 +37,7 @@ klhtm.string.data["enUS"] =
 		["enrage"] = "Enrage", -- ajout by sartas
 		["demoralizingw"] = "Demoralizing Shout", -- ajout by sartas
 		["cristalrestore"] = "Crystal Restore", -- ajout by sartas
-		["deepwound"] = "Deep Wound", -- ajout by sartas
+		
 		hemorrhage = "Hemorrhage",
 		backstab = "Backstab",
 		sinisterstrike = "Sinister Strike",
