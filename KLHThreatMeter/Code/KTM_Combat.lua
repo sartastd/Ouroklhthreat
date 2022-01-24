@@ -17,12 +17,12 @@
 local mod = klhtm
 local me = {}
 mod.combat = me
-local mes_sartas = false
+local mes_sartas = true
 local mes_sartas_taunt = false
 local mes_sartas_maul = false
 local mes_sartas_rogue = false
 local mes_sartas_HS = false
-local mes_sartas_Heal = false
+local mes_sartas_Heal = true
 --[[
 KTM_Combat.lua
 
@@ -146,6 +146,10 @@ me.specialattack = function(abilityid, target, damage, iscrit, spellschool)
 	me.event.damage = damage
 	
 	-- 3) Handle Autoattack modifying abilities separately
+	
+	
+	
+	
 	if abilityid == "whitedamage" then
 
 		-- shaman special: check for rockbiter
@@ -171,7 +175,8 @@ me.specialattack = function(abilityid, target, damage, iscrit, spellschool)
 		-- this will only come from a "whitedamage" call to this method (see above)
 		me.event.threat = me.event.damage * threatmodifier
 		me.event.damage = 0
-
+		
+	
 	-- Special case: Heroic Strike
 	elseif abilityid == "heroicstrike" then
 		
@@ -193,8 +198,11 @@ me.specialattack = function(abilityid, target, damage, iscrit, spellschool)
 	-- Special case: Mind Blast mis a jour sartas
 	elseif 	abilityid == "mindblast" then
 		me.event.threat = me.event.damage * 2 * (1.0 +  mod.my.mods.priest.silentresolve) * mod.my.mods.priest.shadowaffinity
-	
-	
+	elseif abilityid == "demoralizingw" then
+		me.event.threat =  threatmodifier *  mod.my.ability("demoralizingw", "threat")
+	elseif abilityid == "demoralizingb" then
+		me.event.threat =  threatmodifier *  mod.my.ability("demoralizingd", "threat")
+		
 	-- Special Case: Maul
 	elseif abilityid == "maul" then
 			local level = UnitLevel("player")
@@ -281,7 +289,7 @@ me.specialattack = function(abilityid, target, damage, iscrit, spellschool)
 		me.event.name = mod.string.get("spell", abilityid)
 	end
 			if mes_sartas then
-			mod.out.printtrace(string.format("Spell spécial :"..abilityid.." Damage : "..me.event.damage.." target :"..target.." Threat genered : "..me.event.threat ))
+			mod.out.printtrace(string.format("Spell spécial 295 :"..abilityid.." Damage : "..me.event.damage.." target :"..target.." Threat genered : "..me.event.threat ))
 			end
 			
 			
@@ -452,8 +460,21 @@ me.normalattack = function(spellname, spellid, damage, isdot, target, iscrit, sp
 		me.event.threat = 0
 	end
 	
+	-- NG bloodrage / enrage0 aggro  -- NG specific
+	if spellid == "bloodrage" or spellid == "enrage"  then
+		
+		me.event.threat = 0
+		me.event.damage = 0
+	end	
+	-- NG modi execute
+	if spellid == "execute"  then
+		
+		me.event.threat = damage*1.25*threatmodifier
+		me.event.damage = damage
+		me.event.name = mod.string.get("spell", "execute")
+	end	
 			if mes_sartas then
-			mod.out.printtrace(string.format("Spell :"..spellname.." Damage : "..me.event.damage.." target :"..target.." Threat genered : "..me.event.threat ))
+			mod.out.printtrace(string.format("Spell 467:"..spellname.." Damage : "..me.event.damage.." target :"..target.." Threat genered : "..me.event.threat ))
 			end
 	-- now add me.event to individual and totals
 	me.addattacktodata(me.event.name, me.event)
@@ -667,6 +688,8 @@ me.registerheal = function(spellname, spellid, amount, target)
 		me.event.threat = 0
 	elseif spellid == "deathcoil" then
 		me.event.threat = 0
+	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "regrowth" or spellid == "rejuvenation" then
+		me.event.threat = 0	
 	end
 	
 	if mes_sartas_Heal then
@@ -694,8 +717,8 @@ me.powergain = function(amount, powertype, spellid)
 	me.event.rage = 0
 	
 	-- 1) Prevent "overheal" for power gain
-	local maxgain = UnitManaMax("player") - UnitMana("player")
-	amount = math.min(maxgain, amount)
+	--local maxgain = UnitManaMax("player") - UnitMana("player")
+	--amount = math.min(maxgain, amount)
 	
 	if powertype == mod.string.get("power", "rage") then
 		me.event.threat = amount * mod.data.threatconstants.ragegain * mod.my.globalthreat.value
@@ -718,7 +741,7 @@ me.powergain = function(amount, powertype, spellid)
 	me.addattacktodata(mod.string.get("threatsource", "powergain"), me.event)
 	
 	if mes_sartas then
-			mod.out.printtrace(string.format("5-gain energy :"..powertype.." amount : "..amount.." Threat genered : "..me.event.threat ))
+			mod.out.printtrace(string.format("5-gain energy 732:"..powertype.." amount : "..amount.." Threat genered : "..me.event.threat ))
 		end
 	
 	-- now mod it a bit to work into total better
@@ -951,3 +974,4 @@ me.newcastspellbyname = function(name, onself)
 end
 
 CastSpellByName = me.newcastspellbyname
+

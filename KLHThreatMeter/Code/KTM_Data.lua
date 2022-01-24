@@ -126,11 +126,17 @@ me.spells =
 		rage = 0,
 		["4"] = { threat = 110 },
 		},
-	["Demoralizing"] = -- ajout by sartas
+	["demoralizingd"] = -- ajout by sartas
 	{	
 		class = "druid",
 		rage = 10,
-		["5"] = { threat = 40 },
+		["5"] = { threat = 42 },
+		},	
+	["demoralizingw"] = -- ajout by sartas
+	{	
+		class = "warrior",
+		rage = 10,
+		["5"] = { threat = 43 },
 		},	
 	["swipe"] = 
 	{	
