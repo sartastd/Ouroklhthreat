@@ -459,7 +459,10 @@ me.normalattack = function(spellname, spellid, damage, isdot, target, iscrit, sp
 	if spellid == "bloodsiphon" then
 		me.event.threat = 0
 	end
-	
+	if spellid == "deepwound" then
+		me.event.threat = 0
+		me.event.damage = damage
+	end
 	-- NG bloodrage / enrage0 aggro  -- NG specific
 	if spellid == "bloodrage" or spellid == "enrage"  then
 		
