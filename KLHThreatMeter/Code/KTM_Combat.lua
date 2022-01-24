@@ -17,12 +17,12 @@
 local mod = klhtm
 local me = {}
 mod.combat = me
-local mes_sartas = true
+local mes_sartas = false
 local mes_sartas_taunt = false
 local mes_sartas_maul = false
 local mes_sartas_rogue = false
 local mes_sartas_HS = false
-local mes_sartas_Heal = true
+local mes_sartas_Heal = false
 --[[
 KTM_Combat.lua
 
