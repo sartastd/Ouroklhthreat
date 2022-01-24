@@ -65,7 +65,7 @@ klhtm.string.data["frFR"] =
 		["renew"] = "R\195\169novation",	 -- ajout by sartas
 		["rejuvenation"] = "R\195\169cup\195\169ration",	 -- ajout by sartas
 		["regrowth"] = "R\195\169tablissement",	 -- ajout by sartas
-
+		["Bloodcraze"] = "Folie sanguinaire",	 -- ajout by sartas
 		-- Items / Buffs:
 		--["burningadrenaline"] = "Burning Adrenaline",
 		--["arcaneshroud"] = "Arcane Shroud",
