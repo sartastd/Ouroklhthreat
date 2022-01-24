@@ -32,7 +32,11 @@ klhtm.string.data["enUS"] =
 		["cleave"] = "Cleave",
 		["luciole"] = "Faerie Fire",  -- Ajout by sartas
 		["luciolef"] = "Faerie Fire (Feral)",  -- Ajout by sartas
-		["Demoralizing"] = "Demoralizing Roar", -- ajout by sartas
+		["demoralizingd"] = "Demoralizing Roar", -- ajout by sartas
+		["bloodrage"] = "Bloodrage", -- ajout by sartas
+		["enrage"] = "Enrage", -- ajout by sartas
+		["demoralizingw"] = "Demoralizing Shout", -- ajout by sartas
+		["cristalrestore"] = "Crystal Restore", -- ajout by sartas
 		
 		hemorrhage = "Hemorrhage",
 		backstab = "Backstab",
@@ -56,6 +60,9 @@ klhtm.string.data["enUS"] =
 		["siphonlife"] = "Siphon Life", -- no heal threat
 		["drainlife"] = "Drain Life", -- no heal threat
 		["deathcoil"] = "Death Coil",	
+		["renew"] = "Renew",	 -- ajout by sartas
+		["rejuvenation"] = "Rejuvenation",	 -- ajout by sartas
+		["regrowth"] = "Regrowth",	 -- ajout by sartas
 		
 		-- Fel Stamina and Fel Energy DO cause threat! GRRRRRRR!!!
 		--["felstamina"] = "Fel Stamina",

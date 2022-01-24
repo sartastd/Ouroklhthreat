@@ -31,8 +31,12 @@ klhtm.string.data["frFR"] =
 		["scorch"] = "Br\195\187lure",
 		["cleave"] = "Fendre",
 		["luciole"] = "Lucioles",  -- Ajout by sartas
-		["luciole"] = "Lucioles (farouche)",  -- Ajout by sartas
-		["Demoralizing"] = "Rugissement d\195\169moralisant", -- ajout by sartas
+		["luciolef"] = "Lucioles (farouche)",  -- Ajout by sartas
+		["demoralizingd"] = "Demoralizing Roar", -- ajout by sartas
+		["bloodrage"] = "Rage Sanguinaire", -- ajout by sartas
+		["enrage"] = "Enrager", -- ajout by sartas
+		["demoralizingw"] = "", -- ajout by sartas
+		["cristalrestore"] = "Cristal de restauration", -- ajout by sartas
 		
 		-- Items / Buffs:
 		["arcaneshroud"] = "Voile des arcanes",
@@ -57,6 +61,9 @@ klhtm.string.data["frFR"] =
 		["fade"] = "Oubli",
 		["deathcoil"] = "Voile mortel",
 		["thunderfury"] = "Lame-tonnerre",
+		["renew"] = "R\195\169novation",	 -- ajout by sartas
+		["rejuvenation"] = "R\195\169cup\195\169ration",	 -- ajout by sartas
+		["regrowth"] = "R\195\169tablissement",	 -- ajout by sartas
 
 		-- Items / Buffs:
 		--["burningadrenaline"] = "Burning Adrenaline",
