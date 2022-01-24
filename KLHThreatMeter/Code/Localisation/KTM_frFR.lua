@@ -37,7 +37,7 @@ klhtm.string.data["frFR"] =
 		["enrage"] = "Enrager", -- ajout by sartas
 		["demoralizingw"] = "", -- ajout by sartas
 		["cristalrestore"] = "Cristal de restauration", -- ajout by sartas
-		["deepwound"] = "Blessure profonde", -- ajout by sartas
+		
 		
 		-- Items / Buffs:
 		["arcaneshroud"] = "Voile des arcanes",
