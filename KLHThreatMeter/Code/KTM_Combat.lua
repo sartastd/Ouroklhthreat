@@ -688,7 +688,7 @@ me.registerheal = function(spellname, spellid, amount, target)
 		me.event.threat = 0
 	elseif spellid == "deathcoil" then
 		me.event.threat = 0
-	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "Bloodcraze" or spellid == "regrowth" or spellid == "rejuvenation" then
+	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "bloodgang" or spellid == "Bloodcraze" or spellid == "regrowth" or spellid == "rejuvenation" then
 		me.event.threat = 0	
 	end
 	
