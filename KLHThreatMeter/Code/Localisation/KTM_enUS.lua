@@ -64,6 +64,7 @@ klhtm.string.data["enUS"] =
 		["rejuvenation"] = "Rejuvenation",	 -- ajout by sartas
 		["regrowth"] = "Regrowth",	 -- ajout by sartas
 		["Bloodcraze"] = "Blood Craze",	 -- ajout by sartas
+		["bloodfang"] = "Bloodfang",	 -- ajout by sartas
 		
 		-- Fel Stamina and Fel Energy DO cause threat! GRRRRRRR!!!
 		--["felstamina"] = "Fel Stamina",
