@@ -39,8 +39,8 @@ local me = klhtm
 me.frame = nil -- set at runtime 
 
 -- Mod Version
-me.release = 17
-me.revision = 38
+me.release = 18
+me.revision = 250122
 me.build = 235
 
 --[[
