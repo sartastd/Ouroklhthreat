@@ -36,7 +36,7 @@ klhtm.string.data["frFR"] =
 		["bloodrage"] = "Rage Sanguinaire", -- ajout by sartas
 		["enrage"] = "Enrager", -- ajout by sartas
 		["demoralizingw"] = "", -- ajout by sartas
-		["cristalrestore"] = "Cristal de restauration", -- ajout by sartas
+		
 		
 		
 		-- Items / Buffs:
@@ -66,6 +66,9 @@ klhtm.string.data["frFR"] =
 		["rejuvenation"] = "R\195\169cup\195\169ration",	 -- ajout by sartas
 		["regrowth"] = "R\195\169tablissement",	 -- ajout by sartas
 		["Bloodcraze"] = "Folie sanguinaire",	 -- ajout by sartas
+		["bloodfang"] = "Rougecroc",	 -- ajout by sartas traduction a verif !
+		["cristalrestore"] = "Cristal de restauration", -- ajout by sartas
+		
 		-- Items / Buffs:
 		--["burningadrenaline"] = "Burning Adrenaline",
 		--["arcaneshroud"] = "Arcane Shroud",
