@@ -459,7 +459,10 @@ me.normalattack = function(spellname, spellid, damage, isdot, target, iscrit, sp
 	if spellid == "bloodsiphon" then
 		me.event.threat = 0
 	end
-	
+	if spellid == "deepwound" then
+		me.event.threat = 0
+		me.event.damage = damage
+	end
 	-- NG bloodrage / enrage0 aggro  -- NG specific
 	if spellid == "bloodrage" or spellid == "enrage"  then
 		
@@ -473,6 +476,14 @@ me.normalattack = function(spellname, spellid, damage, isdot, target, iscrit, sp
 		me.event.damage = damage
 		me.event.name = mod.string.get("spell", "execute")
 	end	
+	if spellid == "thunderfury"  then
+		
+		me.event.threat = damage*threatmodifier*1.8
+		me.event.damage = damage
+		me.event.name = mod.string.get("spell", "thunderfury")
+	end	
+	
+	
 			if mes_sartas then
 			mod.out.printtrace(string.format("Spell 467:"..spellname.." Damage : "..me.event.damage.." target :"..target.." Threat genered : "..me.event.threat ))
 			end
@@ -688,7 +699,7 @@ me.registerheal = function(spellname, spellid, amount, target)
 		me.event.threat = 0
 	elseif spellid == "deathcoil" then
 		me.event.threat = 0
-	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "bloodgang" or spellid == "Bloodcraze" or spellid == "regrowth" or spellid == "rejuvenation" then
+	elseif spellid == "renew" or spellid == "cristalrestore" or spellid == "Bloodcraze" or spellid == "regrowth" or spellid == "rejuvenation" then
 		me.event.threat = 0	
 	end
 	
