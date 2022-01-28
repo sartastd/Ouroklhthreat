@@ -476,12 +476,7 @@ me.normalattack = function(spellname, spellid, damage, isdot, target, iscrit, sp
 		me.event.damage = damage
 		me.event.name = mod.string.get("spell", "execute")
 	end	
-	if spellid == "thunderfury"  then
 		
-		me.event.threat = damage*threatmodifier*1.8
-		me.event.damage = damage
-		me.event.name = mod.string.get("spell", "thunderfury")
-	end	
 	
 	
 			if mes_sartas then
